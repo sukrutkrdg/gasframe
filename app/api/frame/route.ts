@@ -1,5 +1,5 @@
 // app/api/frame/route.ts
-// (DÜZELTİLMİŞ - img width/height)
+// (SON DÜZELTME - img width/height)
 
 import { NextRequest, NextResponse } from 'next/server';
 import {
