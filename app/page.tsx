@@ -1,7 +1,7 @@
 // app/page.tsx
-// (DÜZELTİLMİŞ - Resim URL'si güncellendi)
+// (DÜZELTİLMİŞ - @coinbase/onchainkit import'u düzeltildi)
 
-import { getFrameMetadata } from 'onchainkit';
+import { getFrameMetadata } from '@coinbase/onchainkit';
 
 // Bu fonksiyon, Vercel'de dinamik olarak çalışır ve projenin URL'sini alır
 const getBaseUrl = () => {
