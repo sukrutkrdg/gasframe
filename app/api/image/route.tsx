@@ -1,5 +1,5 @@
 // app/api/image/route.tsx
-// (YENİ DOSYA - Sadece Resim Oluşturma)
+// (Bu dosya zaten doğru, herhangi bir değişiklik gerekmiyor)
 
 import { NextRequest } from 'next/server';
 import { ImageResponse } from 'next/server';

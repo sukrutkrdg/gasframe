@@ -6,7 +6,8 @@ import {
   getFrameHtmlResponse,
   FrameRequest,
   getFrameMessage,
-} from 'onchainkit';
+} from '@coinbase/onchainkit';
+
 import { ImageResponse } from 'next/server';
 import { createPublicClient, http, formatGwei } from 'viem';
 import { mainnet, base } from 'viem/chains';
