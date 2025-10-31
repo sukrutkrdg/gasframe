@@ -1,7 +1,7 @@
-// app/layout.tsx (DÜZELTİLMİŞ)
+// app/layout.tsx (DÜZELTİLMİŞ - Geist fontları kaldırıldı)
 
 import type { Metadata } from "next";
-import "./globals.css"; // globals.css dosyasını hala kullanıyoruz
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "/onchain-lab Gas Tracker",
@@ -15,9 +15,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Geist fontlarını ve karmaşık className'leri kaldırdık. 
-        Frame'imiz zaten Arial fontu kullandığı için bu bir sorun değil.
-      */}
       <body>
         {children}
       </body>

@@ -12,7 +12,7 @@
     "next": "^14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "onchainkit": "^0.0.1",
+    "onchainkit": "^2.2.4",
     "satori": "^0.18.3",
     "viem": "^2.38.5"
   },
