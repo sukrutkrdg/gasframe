@@ -1,5 +1,8 @@
 // app/page.tsx
 
+// Vercel build'ini tetikle
+
+
 import { getFrameMetadata } from 'onchainkit';
 
 // Bu fonksiyon, Vercel'de dinamik olarak çalışır ve projenin URL'sini alır
