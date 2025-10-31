@@ -1,5 +1,5 @@
 // app/api/frame/route.ts
-// (BASİTLEŞTİRİLMİŞ VE DOĞRU VERSİYON)
+// (DÜZELTİLMİŞ - img width/height)
 
 import { NextRequest, NextResponse } from 'next/server';
 import {
@@ -71,8 +71,9 @@ export async function POST(req: NextRequest): Promise<Response> {
         <div style={{ display: 'flex', marginBottom: 15 }}>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg"
-            width="50"
-            height="50"
+            /* HATA BURADAYDI: "50" yerine {50} olmalı */
+            width={50}
+            height={50}
             style={{ marginRight: 20 }}
           />
           Ethereum: {parseFloat(eth).toFixed(2)} Gwei
@@ -80,8 +81,9 @@ export async function POST(req: NextRequest): Promise<Response> {
         <div style={{ display: 'flex' }}>
           <img
             src="https://raw.githubusercontent.com/base-org/brand-kit/main/logo/symbol/Base_Symbol_Blue.svg"
-            width="50"
-            height="50"
+            /* HATA BURADAYDI: "50" yerine {50} olmalı */
+            width={50}
+            height={50}
             style={{ marginRight: 20 }}
           />
           Base: {parseFloat(base).toFixed(2)} Gwei
