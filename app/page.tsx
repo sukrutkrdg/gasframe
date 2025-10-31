@@ -1,26 +1,21 @@
 // app/page.tsx
-
-// Vercel build'ini tetikle
-
+// (DÜZELTİLMİŞ - Resim URL'si güncellendi)
 
 import { getFrameMetadata } from 'onchainkit';
 
 // Bu fonksiyon, Vercel'de dinamik olarak çalışır ve projenin URL'sini alır
 const getBaseUrl = () => {
-  if (process.env.VERCEL_URL) {
-    return `https://{process.env.VERCEL_URL}`;
-  }
-  // Lokal çalışma için
-  return 'http://localhost:3000';
+  return process.env.VERCEL_URL
+    ? `https://{process.env.VERCEL_URL}`
+    : 'http://localhost:3000';
 };
 
 // Ana sayfa için Frame meta etiketlerini oluştur
 export async function generateMetadata() {
   const baseUrl = getBaseUrl();
   
-  // İlk Frame görüntüsünü API'mizden almamız gerekiyor
-  // API'miz hem GET hem POST desteklediği için bu çalışır
-  const initialImageUrl = `${baseUrl}/api/frame?t=${Date.now()}`;
+  // İlk Frame görüntüsünü /api/image'dan alıyoruz
+  const initialImageUrl = `${baseUrl}/api/image?t=${Date.now()}`;
 
   const frameMetadata = getFrameMetadata({
     buttons: [
@@ -28,12 +23,12 @@ export async function generateMetadata() {
         label: '🔄 Gas Ücretlerini Yenile',
       },
     ],
-    // İlk görüntü için API'mizi çağırıyoruz
+    // İlk görüntü için /api/image'ı çağırıyoruz
     image: {
       src: initialImageUrl,
       aspectRatio: '1.91:1',
     },
-    // Butona basıldığında POST yapılacak URL
+    // Butona basıldığında POST yapılacak URL (/api/frame)
     postUrl: `${baseUrl}/api/frame`,
   });
 
